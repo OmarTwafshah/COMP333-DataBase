@@ -1,0 +1,30 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.tf {
+	-fx-background-color: transparent;
+	-fx-background-radius: 15.0;
+	-fx-border-radius: 15.0;
+	-fx-border-color: #c25140;
+	-fx-prompt-text-fill:white;
+}
+.toggle-button1 {
+	    -fx-background-color: #ed6253;
+	    -fx-border-radius: 25.0 0.0 0.0 25.0;
+	    -fx-background-radius: 25.0 0.0 0.0 25.0;
+}
+
+
+.toggle-button2{
+	    -fx-background-color: #ed6253;
+	    -fx-border-radius: 0.0 25.0 25.0 0.0;
+	    -fx-background-radius: 0.0 25.0 25.0 0.0;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #b33527;
+}
+
+.hboxS {
+	-fx-border-color: #a33018;
+	-fx-border-width: 0.0 0.0 1.0 0.0;
+}

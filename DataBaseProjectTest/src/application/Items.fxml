@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ItemsController">
+   <center>
+      <AnchorPane prefHeight="668.0" prefWidth="1036.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="TableData" layoutX="95.0" layoutY="44.0" prefHeight="296.0" prefWidth="810.0" stylesheets="@tables.css">
+              <columns>
+                <TableColumn fx:id="IDColumn" prefWidth="62.399993896484375" text="ID " />
+                <TableColumn fx:id="NameColumn" prefWidth="83.19992065429688" text="Name" />
+                  <TableColumn fx:id="DepartmentIDColumn" prefWidth="100.00001525878906" text="Department ID " />
+                  <TableColumn fx:id="ProviderIDColumn" prefWidth="102.39996337890625" text="Provider ID " />
+                  <TableColumn fx:id="ItemsPriceColumn" prefWidth="108.00006103515625" text="Items Price " />
+                  <TableColumn fx:id="ProductionDateColumn" prefWidth="121.5999755859375" text="Production Date " />
+                  <TableColumn fx:id="ExpirationDateColumn" prefWidth="130.39996337890625" text="Expiration Date" />
+                  <TableColumn fx:id="QuantityCoulmn" prefWidth="101.5999755859375" text="Quantity" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="175.0" layoutY="22.0" />
+            <Button fx:id="Update" layoutX="434.0" layoutY="442.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #ed6253#ed6253 #ed6253#ed6253;" stylesheets="@tables.css" text="Update" />
+            <Label layoutX="252.0" layoutY="359.0" prefHeight="27.0" prefWidth="148.0" text="Update An Item:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <Label layoutX="198.0" layoutY="506.0" text="Delete Item:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="oldID" layoutX="407.0" layoutY="361.0" prefHeight="26.0" prefWidth="96.0" promptText="Old ID" stylesheets="@tables.css" />
+            <TextField fx:id="newName" layoutX="155.0" layoutY="399.0" prefHeight="26.0" prefWidth="96.0" promptText="New Name" stylesheets="@tables.css" />
+            <TextField fx:id="newDepartmentID" layoutX="257.0" layoutY="399.0" prefHeight="28.0" prefWidth="110.0" promptText="New Department ID " stylesheets="@tables.css" />
+            <TextField fx:id="newProviderID" layoutX="372.0" layoutY="398.0" prefHeight="28.0" prefWidth="108.0" promptText="New ProviderID " stylesheets="@tables.css" />
+            <TextField fx:id="newItemsPrice" layoutX="490.0" layoutY="399.0" prefHeight="28.0" prefWidth="105.0" promptText="New Item Price" stylesheets="@tables.css" />
+            <Label layoutX="214.0" layoutY="15.0" style="-fx-underline: true;" text="Search For Items:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="SearchFiled" layoutX="385.0" layoutY="14.0" prefHeight="26.0" prefWidth="254.0" promptText="For Search Enter Full Name Or ID Number" />
+            <TextField fx:id="ID" layoutX="315.0" layoutY="505.0" prefHeight="26.0" prefWidth="96.0" promptText="Item ID" stylesheets="@tables.css" />
+            <TextField fx:id="newProductionDate" layoutX="601.0" layoutY="399.0" prefHeight="28.0" prefWidth="139.0" promptText="New Production Date " stylesheets="@tables.css" />
+            <TextField fx:id="newExpirationDate" layoutX="743.0" layoutY="400.0" prefHeight="28.0" prefWidth="128.0" promptText="New Expiration Date" stylesheets="@tables.css" />
+            <Button fx:id="Delete" layoutX="431.0" layoutY="505.0" mnemonicParsing="false" onAction="#DeleteSetAction" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #ed6253#ed6253 #ed6253#ed6253;" stylesheets="@tables.css" text="Delete" />
+            <Button fx:id="Insert" layoutX="435.0" layoutY="619.0" mnemonicParsing="false" onAction="#AddSetAction" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #ed6253#ed6253 #ed6253#ed6253;" stylesheets="@tables.css" text="Add" />
+            <TextField fx:id="newQuantuty" layoutX="877.0" layoutY="399.0" prefHeight="26.0" prefWidth="96.0" promptText="New Quantity" stylesheets="@tables.css" />
+            <Button fx:id="itemsBack" layoutX="35.0" layoutY="11.0" mnemonicParsing="false" onAction="#itemsBackOnAction" prefHeight="28.0" prefWidth="60.0" style="-fx-background-color: #ed6253#ed6253 #ed6253#ed6253;" stylesheets="@tables.css" text="Back" />
+            <Label layoutX="9.0" layoutY="404.0" prefHeight="17.0" prefWidth="142.0" text="(Enter Any Field To Update)">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Line endX="976.0" endY="133.11172485351562" layoutX="10.0" layoutY="356.0" startX="-11.000017166137695" startY="133.11172485351562" stroke="#777272" />
+            <Line endX="955.5" endY="133.1116943359375" layoutX="29.0" layoutY="416.0" startX="-14.342636108398438" startY="133.1116943359375" stroke="#777272" />
+            <TextField fx:id="addName" layoutX="165.0" layoutY="581.0" prefHeight="28.0" prefWidth="73.0" promptText="Name" stylesheets="@tables.css" />
+            <TextField fx:id="addDepID" layoutX="249.0" layoutY="580.0" prefHeight="28.0" prefWidth="110.0" promptText="Department ID " stylesheets="@tables.css" />
+            <TextField fx:id="addProID" layoutX="362.0" layoutY="580.0" prefHeight="28.0" prefWidth="88.0" promptText="ProviderID " stylesheets="@tables.css" />
+            <TextField fx:id="addItemsPrice" layoutX="464.0" layoutY="580.0" prefHeight="28.0" prefWidth="82.0" promptText="Item Price" stylesheets="@tables.css" />
+            <TextField fx:id="addProductionDate" layoutX="553.0" layoutY="580.0" prefHeight="28.0" prefWidth="112.0" promptText="Production Date " stylesheets="@tables.css" />
+            <TextField fx:id="addExpirationDate" layoutX="682.0" layoutY="581.0" prefHeight="28.0" prefWidth="110.0" promptText="Expiration Date" stylesheets="@tables.css" />
+            <TextField fx:id="addQuantuty" layoutX="806.0" layoutY="581.0" prefHeight="26.0" prefWidth="96.0" promptText="Quantity" stylesheets="@tables.css" />
+            <Label layoutX="35.0" layoutY="585.0" text="Add An Item:">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="69.0" layoutX="649.0" layoutY="3.0">
+               <image>
+                  <Image url="@../../../Assets/Untitled%20design-19.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
